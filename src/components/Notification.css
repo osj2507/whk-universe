@@ -1,0 +1,17 @@
+.notification-wrapper {
+  position: sticky;
+  top: 0;
+  padding: 32px;
+}
+
+.notification-content {
+  max-width: 1040px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .notification-wrapper {
+    display: none;
+  }
+}
