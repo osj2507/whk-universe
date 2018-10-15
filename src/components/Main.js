@@ -1,5 +1,6 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, withRouter } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import Home from "../pages/Home";
 import First from "../pages/First";
@@ -8,17 +9,26 @@ import Third from "../pages/Third";
 
 import "./Main.css";
 
-function Container() {
+function Container({ location }) {
   return (
     <>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/first" component={First} />
-        <Route path="/second" component={Second} />
-        <Route path="/third" component={Third} />
-      </Switch>
+      <TransitionGroup className="transition-group">
+        <CSSTransition
+          key={location.key}
+          classNames={'fade'}
+        >
+          <section className="route-section">
+            <Switch location={location}>
+              <Route exact path="/" component={Home} />
+              <Route path="/first" component={First} />
+              <Route path="/second" component={Second} />
+              <Route path="/third" component={Third} />
+            </Switch>
+          </section>
+        </CSSTransition>
+      </TransitionGroup>
     </>
   );
 }
 
-export default Container;
+export default withRouter(Container);
