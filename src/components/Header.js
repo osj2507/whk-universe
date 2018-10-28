@@ -8,16 +8,16 @@ function Header() {
     <nav className="navigation-wrapper">
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">Universe</Link>
         </li>
         <li>
-          <Link to="/first">First</Link>
+          <Link to="/planet/earth">Earth</Link>
         </li>
         <li>
-          <Link to="/second">Second</Link>
+          <Link to="/planet/mars">Mars</Link>
         </li>
         <li>
-          <Link to="/third">Third</Link>
+          <Link to="/planet/venus">Venus</Link>
         </li>
       </ul>
     </nav>
