@@ -1,11 +1,35 @@
-.section-planet--earth {
-	background-color: blue;
+.section-planet {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
-.section-planet--mars {
-	background-color: red;
+.section-planet .planet-globe {
+  position: absolute;
+  width: calc(90vw);
+  height: calc(60vw);
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: calc(-60vw);
+  border-radius: 50%;
 }
 
-.section-planet--venus {
-	background-color: yellow;
+.section-planet--earth .planet-globe {
+  background-color: #4172F4;
+}
+
+.section-planet--mars .planet-globe {
+  background-color: #E88C4E;
+}
+
+.section-planet--venus .planet-globe {
+  background-color: #C99E74;
+}
+
+.fade-enter.fade-enter-active .section-planet .planet-globe {
+  bottom: calc(-45vw);
+  transition: bottom 1000ms ease;
+  transition-delay: 1000ms;
 }

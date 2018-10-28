@@ -11,6 +11,9 @@ function Planet(req) {
       <div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
+      <div className="planet-globe">
+        &nbsp;
+      </div>
     </section>
   );
 }
