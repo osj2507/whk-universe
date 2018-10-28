@@ -1,16 +1,17 @@
 .fade-enter {
-  opacity: 0.01;
+  opacity: 0;
 }
 .fade-enter.fade-enter-active {
   opacity: 1;
-  transition: opacity 600ms ease-in;
+  transition: opacity 1000ms ease;
+  transition-delay: 500ms;
 }
 .fade-exit {
   opacity: 1;
 }
 .fade-exit.fade-exit-active {
-  opacity: 0.01;
-  transition: opacity 100ms ease-in;
+  opacity: 0;
+  transition: opacity 500ms ease;
 }
 
 div.transition-group {
@@ -19,7 +20,8 @@ div.transition-group {
 
 section.route-section {
   position: absolute;
-  width: 100%;
+  width: 100vw;
+  /*height: 100vh;*/
   top: 0;
   left: 0;
 }
